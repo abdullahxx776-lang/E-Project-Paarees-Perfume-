@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paarees Perfume | Timeless Elegance</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/FzNLmF.ico" type="image/x-icon">
+
+    <link rel="shortcut icon" href="/FzNLmF.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+
+        /* navbar */
+        .logo {
+            height: 45px;
+            /* Adjust logo size */
+            width: auto;
+            border-radius: 8px;
+            /* Optional – soft rounded edges */
+        }
+
+
+        .navbar-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            text-transform: uppercase;
+            color: white !important;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #d4af37 !important;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .navbar .dropdown-menu {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: none !important;
+        }
+
+        .dropdown-item {
+            color: white !important;
+        }
+
+        .dropdown-item:hover {
+            color: #d4af37 !important;
+            background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+
+        .btn-shop {
+            background-color: #d4af37;
+            color: #333;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+
+
+        .btn-shop:hover {
+            color: #f8f9fa;
+            transform: translateY(-2px);
+            background-color: #d4af37;
+
+        }
+
+        .navbar.scrolled {
+            background: var(--light-charcoal);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 10px 0;
+        }
+
+        /* HERO SECTION */
+        .ck-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(/images/ck.jpg) center/cover no-repeat;
+        }
+
+
+
+        .hero-content {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 140px;
+            color: transparent;
+            -webkit-text-stroke: 2px gold;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            animation: fadeInDown 2s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #f5f5f5;
+            margin-top: 10px;
+            animation: fadeInUp 2s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* STORY SECTION */
+        .story-section {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(6px);
+            border-radius: 1rem;
+            padding: 4rem 2rem;
+            margin: 3rem auto;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+        }
+
+        .gold-title {
+            color: gold;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-section p {
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+
+        .story-section img {
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            transition: transform 0.4s ease;
+        }
+
+        .story-section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* CARD SECTION */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            border-radius: 1rem;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+        }
+
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: gold;
+        }
+
+        .btn-custom {
+            background: linear-gradient(to right, #c1a45f, #e1c16e);
+            border: none;
+            color: #000;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(to right, #e1c16e, #c1a45f);
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
+        .footer-link {
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: #d4af37 !important;
+            border-bottom: 1px solid #d4af37;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="p-3 navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <img src="/images/WhatsApp Image 2025-10-15 at 2.17.36 PM.jpeg" alt="" class="logo me-2">
+                <a class="navbar-brand fw-bold text-warning" href="/index.html">
+                    Paarees Perfume
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Collections
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item fw-bold" href="/dior.html">Dior</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/ck.html">CK</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/davidoff.html">Davidoff</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/other.html">Other</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/Contact Us.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                    <a href="/login.html" class="btn btn-shop px-4 fw-bold">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section>
+
+        <div class="ck-hero">
+            <div class="hero-content">
+                <h1>Calvin Klein</h1>
+                <p>"Calvin Klein. Minimal, modern, iconic."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY SECTION -->
+    <section class="container story-section">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="gold-title">The Story of Calvin Klein</h2>
+                <p>Founded in 1968 in New York by Calvin Klein, the brand became famous for its modern, minimalist style
+                    and bold advertising. From iconic jeans to perfumes and underwear, Calvin Klein redefined casual
+                    elegance and remains a symbol of confidence and simplicity worldwide.
+                </p>
+                <p>Its timeless designs blend luxury with comfort, appealing to people of all generations.
+                    Today, Calvin Klein continues to inspire the world with its innovative fashion and unforgettable
+                    campaigns.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="/Ck image/ck lg.jpg" alt="Dior Legacy" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- CARD SECTION -->
+    <section class="container py-5">
+        <h2 class="text-center gold-title mb-5">Discover CK Beauty</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/Ck image/ck eternity.jpg" class="card-img-top" alt="Dior Nature">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CK Eternity</h5>
+                        <p class="text-light">CK Eternity is a timeless fragrance that blends fresh floral and aromatic
+                            notes to symbolize everlasting love and elegance.</p>
+                        <p class="text-warning">139$</p>
+                        <a href="#" class="btn btn-custom mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/Ck image/ck in2u.jpg" class="card-img-top" alt="Dior Men">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CK In2U</h5>
+                        <p class="text-light">CK IN2U is a youthful, energetic fragrance that captures the spontaneous
+                            spirit of modern connection with warm amber notes.</p>
+                        <p class="text-warning">110$</p>
+
+                        <a href="#" class="btn btn-custom mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/Ck image/ck obsession.jpg" class="card-img-top" alt="Dior Women">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CK Obsession</h5>
+                        <p class="text-light">CK Obsession is a bold, sensual fragrance that evokes passion and
+                            intensity with rich notes of amber, spices, and warm woods.</p>
+                        <p class="text-warning">99$</p>
+
+                        <a href="#" class="btn btn-custom mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/Ck image/ck one.jpg" class="card-img-top" alt="Dior Women">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CK One</h5>
+                        <p class="text-light">CK One is a clean, fresh, and universally appealing unisex fragrance that
+                            blends citrus, green tea, and musk for a modern, minimalist vibe.</p>
+                        <p class="text-warning">140$</p>
+                        <a href="#" class="btn btn-custom mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card 5 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/Ck image/ck sheer beauty.jpg" class="card-img-top" alt="Dior Women">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CK Sheer Beauty</h5>
+                        <p class="text-light">CK Sheer Beauty is a soft, feminine fragrance that radiates confidence and
+                            grace with delicate floral and fruity notes.</p>
+                        <p class="text-warning">111$</p>
+
+                        <a href="#" class="btn btn-custom mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+            <!-- card 6 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/Ck image/ck shock.jpg" class="card-img-top" alt="Dior Women">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CK Shock</h5>
+                        <p class="text-light">CK One Shock is a daring, youthful fragrance that bursts with bold
+                            oriental and spicy notes, exuding energy and rebellious charm.</p>
+                        <p class="text-warning">120$</p>
+
+                        <a href="#" class="btn btn-custom mt-2">Discover</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light pt-5 pb-4">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+
+                <!-- Company Info -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Paarees Perfumes</h5>
+                    <p>
+                        We bring you an exclusive collection of perfumes from the most prestigious brands across the
+                        globe.
+                        Perfect fragrance for every occasion.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                    <p><a href="/index.html" class="text-light text-decoration-none footer-link">Home</a></p>
+                    <p><a href="/About.html" class="text-light text-decoration-none footer-link">About</a></p>
+                    <p><a href="/Contact Us.html" class="text-light text-decoration-none footer-link">Contact</a></p>
+                    <p><a href="/faq.html" class="text-light text-decoration-none footer-link">FAQ</a></p>
+                </div>
+                <!-- Categories -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Collections</h5>
+                    <p><a href="dior.html" class="text-light text-decoration-none footer-link">Dior Perfumes</a></p>
+                    <p><a href="ck.html" class="text-light text-decoration-none footer-link">CK Perfumes</a></p>
+                    <p><a href="davidoff.html" class="text-light text-decoration-none footer-link">Davidoff Perfumes</a>
+                    </p>
+                    <p><a href="/other.html" class="text-light text-decoration-none footer-link">Other Perfumes</a></p>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home me-2"></i> Karachi, Pakistan</p>
+                    <p class="footer-link" style="cursor: pointer;"><i class="fas fa-envelope me-2"></i
+                            class="footer-link">info@paresperfumes.com</p>
+                    <p><i class="fas fa-phone me-2"></i> +92 300 1234567</p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Social media + Copyright -->
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 Paarees Perfumes | All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
